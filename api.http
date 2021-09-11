@@ -1,0 +1,27 @@
+POST /posts HTTP/1.1
+Host: localhost:4001
+Content-Type: application/json
+ 
+{
+    "title": "First post"
+}
+
+################################
+# get the post 
+
+GET  http://localhost:4000/posts HTTP/1.1
+
+####### Comments #################################
+
+POST /posts/123/comments HTTP/1.1
+Host: localhost:4001
+Content-Type: application/json
+
+{
+ "content": "I am a comment 1"
+}
+
+
+######## get the comments 
+
+GET  http://localhost:4001/posts/123/comments HTTP/1.1
